@@ -44,4 +44,6 @@ Using these commands together can have several dangers:
 7. **Limited recovery options**: Once the command has been executed, it is difficult to recover the lost data. Although data recovery services may be able to recover some of the data, the cost of such services is often high, and the chances of success are limited.
 8. **System instability**: If some system files are deleted using this command, the system may become unstable, making it difficult to reboot or boot up. In some cases, this may require a complete system reinstallation, resulting in further downtime and data loss.
 
-Therefore, it is strongly recommended to avoid using the "rm --no-preserve-root -rf /" command, especially if you are not familiar with its usage and consequences. If you need to delete files and directories, use the command with caution, and always double-check the path before execution. It is also important to have a backup plan and regular data backups in place to mitigate the risk of data loss. **YOU HAVE BEEN WARNED!!**
+Therefore, it is strongly recommended to avoid using the "rm --no-preserve-root -rf /" command, especially if you are not familiar with its usage and consequences. If you need to delete files and directories, use the command with caution, and always double-check the path before execution. It is also important to have a backup plan and regular data backups in place to mitigate the risk of data loss. 
+
+**YOU HAVE BEEN WARNED!!**
