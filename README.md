@@ -10,21 +10,30 @@ This script uses several commands to take control of the Windows folder and desr
 1. `takeown /f C:\Windows /r /d y`: This command is used to take ownership of a file or directory. Here's what each part means:
 
 takeown: This is the command used to take ownership.
+
 /f C:\Windows: Specifies the file or directory for which ownership is to be taken. In this case, it's the Windows directory (C:\Windows).
+
 /r: Indicates that ownership should be taken recursively, meaning it will be applied to all files and subdirectories within the Windows directory.
+
 /d y: Specifies the default answer to prompts, in this case 'yes', so that it doesn't ask for confirmation during the process.
 
 2. `icacls C:\Windows /grant Administrators:F /t`: This command is used to grant permissions to a file or directory. Here's what each part means:
 
 icacls: This is the command used to modify ACLs (Access Control Lists).
+
 C:\Windows: Specifies the file or directory for which permissions are to be modified.
+
 /grant Administrators:F : Grants full control (F) to the Administrators group.
+
 /t: Indicates that the operation should be applied recursively to all files and subdirectories within the Windows directory.
 
 3. `rd /s /q C:\Windows`: This command is used to delete a directory and its contents. Here's what each part means:
 
+
 rd: This is the command used to remove directories.
+
 /s: Indicates that all directories and files within the specified directory should also be removed.
+
 /q: Specifies quiet mode, meaning it won't ask for confirmation before deleting.
 
 Using these commands together can have several dangers:
