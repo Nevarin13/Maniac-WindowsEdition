@@ -5,17 +5,29 @@
     This program should only be used if you understand its risks.
     Don't use this script if you have no idea what you are doing.
 
-This script uses the `del /S /F /Q /A:S C:\windows` command. If you have no idea what that means, you shouldn't be using this script. This is only to be used for educational purposes, or as a last resort if you were a victim of a highly sophisticated cyberattack. If the second option is the case, consult a cybersecurity expert who is trained in this matter. In either case, make sure you have a backup of your Windows device. Here's a breakdown of this script's primary command:
+This script uses the several commands to take control of the Windows folder and desroy it, thus destroying the Windows Operating System. If you have no idea what that means, you shouldn't be using this script. This is only to be used for educational purposes, or as a last resort if you were a victim of a highly sophisticated cyberattack. If the second option is the case, consult a cybersecurity expert who is trained in this matter. In either case, make sure you have a backup of your Windows device. Here's a breakdown of this script's primary command:
 
-The `del` command in Windows is used to delete files. Here's what each parameter in the command used in this does:
+1. `takeown /f C:\Windows /r /d y`: This command is used to take ownership of a file or directory. Here's what each part means:
 
-- `/S`: Deletes specified files from the current directory and all subdirectories.
-- `/F`: Forces deletion of read-only files.
-- `/Q`: Quiet mode. Does not prompt for confirmation when deleting files.
-- `/A:S`: Selects files to delete based on attributes. In this case, it selects files with the system attribute.
-- `C:\windows` specifies the directory from which files will be deleted. Be cautious when using this command, especially with system directories like `C:\windows`, as it can have severe consequences.
+takeown: This is the command used to take ownership.
+/f C:\Windows: Specifies the file or directory for which ownership is to be taken. In this case, it's the Windows directory (C:\Windows).
+/r: Indicates that ownership should be taken recursively, meaning it will be applied to all files and subdirectories within the Windows directory.
+/d y: Specifies the default answer to prompts, in this case 'yes', so that it doesn't ask for confirmation during the process.
 
-Using the `del /S /F /Q /A:S C:\windows` command can have several dangers:
+2. `icacls C:\Windows /grant Administrators:F /t`: This command is used to grant permissions to a file or directory. Here's what each part means:
+
+icacls: This is the command used to modify ACLs (Access Control Lists).
+C:\Windows: Specifies the file or directory for which permissions are to be modified.
+/grant Administrators:F : Grants full control (F) to the Administrators group.
+/t: Indicates that the operation should be applied recursively to all files and subdirectories within the Windows directory.
+
+3. `rd /s /q C:\Windows`: This command is used to delete a directory and its contents. Here's what each part means:
+
+rd: This is the command used to remove directories.
+/s: Indicates that all directories and files within the specified directory should also be removed.
+/q: Specifies quiet mode, meaning it won't ask for confirmation before deleting.
+
+Using these commands together can have several dangers:
 
 1. **Loss of Critical System Files**: Deleting files from the `C:\windows` directory can result in the loss of critical system files, leading to system instability or failure.
 
