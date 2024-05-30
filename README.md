@@ -5,7 +5,7 @@
     This program should only be used if you understand its risks.
     Don't use this script if you have no idea what you are doing.
 
-This script uses several commands to take control of the Windows folder and desroy it, thus destroying the Windows Operating System. If you have no idea what that means, you shouldn't be using this script. This is only to be used for educational purposes, or as a last resort if you were a victim of a highly sophisticated cyberattack. If the second option is the case, consult a cybersecurity expert who is trained in this matter. In either case, make sure you have a backup of your Windows device. Here's a breakdown of this script's primary command:
+This script uses several commands to take control of the Windows folder and desroy it, thus destroying the Windows Operating System. If you have no idea what that means, you shouldn't be using this script. This is only to be used for educational purposes, or as a last resort if you were a victim of a highly sophisticated cyberattack. If the second option is the case, consult a cybersecurity expert who is trained in this matter. In either case, make sure you have a backup of your Windows device. Here's a breakdown of this script's primary commands:
 
 1. `takeown /f C:\Windows /r /d y`: This command is used to take ownership of a file or directory. Here's what each part means:
 
